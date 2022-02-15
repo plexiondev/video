@@ -2,19 +2,18 @@
 
 
 let picker = document.getElementById("video-picker");
-let video = document.getElementById("player");
+let player = document.getElementById("player");
 
 document.body.setAttribute("playing","false");
 
 // on file
 picker.onchange = function(event) {
     var file = picker.files;
-    console.log(file[0]);
+    console.log(`Loading file input... (${file[0].name})`);
 
     // return
     const src = URL.createObjectURL(file[0]);
-    console.log(src);
-    video.setAttribute("src",`${src}`);
+    player.setAttribute("src",`${src}`);
 
     // set state
     document.body.setAttribute("playing","true");

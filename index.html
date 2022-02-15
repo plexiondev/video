@@ -31,6 +31,9 @@
             <video id="player" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
+            <span class="exit" onclick="exit()">
+                <i class="icon w-28" data-feather="x"></i>
+            </span>
             <div class="controls">
                 <span id="restart" onclick="document.getElementById('player').currentTime = 0">
                     <i class="icon w-28" data-feather="skip-back"></i>
@@ -38,6 +41,9 @@
                 <span id="play" onclick="play()">
                     <i class="icon w-28" data-feather="play" id="play-icon"></i>
                     <i class="icon w-28" data-feather="pause" id="pause-icon"></i>
+                </span>
+                <span id="time-control">
+                    <strong id="timestamp"></strong><p class="sep">/</p><i id="final-length"></i>
                 </span>
                 <span id="volume-down" onclick="document.getElementById('player').volume -= 0.1">
                     <i class="icon w-28" data-feather="volume-1"></i>
