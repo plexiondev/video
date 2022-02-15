@@ -26,7 +26,7 @@
     <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
-<body class="dark" style="--accent-page: 255;">
+<body class="dark" style="--accent-page: 0;">
     <div class="hero video-play-wrap">
         <div class="no-video" id="no-video">
             <span class="video-no-panel">
@@ -43,6 +43,9 @@
                 Your browser does not support HTML5 video.
             </video>
             <div class="controls">
+                <span id="restart" onclick="document.getElementById('player').currentTime = 0">
+                    <i class="icon w-28" data-feather="skip-back"></i>
+                </span>
                 <span id="play" onclick="play()">
                     <i class="icon w-28" data-feather="play" id="play-icon"></i>
                     <i class="icon w-28" data-feather="pause" id="pause-icon"></i>
