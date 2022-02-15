@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <!-- meta info -->
+    <title translate="no">video-playback | plexion</title>
+    <meta name="theme-color" content="#003BFF">
+    <!-- mobile iOS support -->
+    <link rel="apple-touch-icon" href="/img/ios.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="https://plexion.dev/site.webmanifest">
+    <!-- display -->
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="https://plexion.dev/css/reset.css">
+    <link rel="stylesheet" href="https://plexion.dev/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- icon -->
+    <link rel="shortcut icon" type="ico" href="https://plexion.dev/favicon.ico"/>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <!-- js scripts -->
+    <script src="https://plexion.dev/js/scroll.js"></script>
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20a071237e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="dark" style="--accent-page: 255;">
+    <div class="hero video-play-wrap">
+        <div class="no-video" id="no-video">
+            <span class="video-no-panel">
+                <h4>Select a file to get started!</h4>
+                <br>
+                <label class="video-picker-wrap button focus">
+                    <input type="file" id="video-picker" accept="video/mp4, audio/mp3">
+                    Upload
+                </label>
+            </span>
+        </div>
+        <div class="video-player">
+            <video id="player" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div class="controls">
+                <span id="play" onclick="play()">
+                    <i class="icon w-28" data-feather="play" id="play-icon"></i>
+                    <i class="icon w-28" data-feather="pause" id="pause-icon"></i>
+                </span>
+                <span id="volume-down" onclick="document.getElementById('player').volume -= 0.1">
+                    <i class="icon w-28" data-feather="volume-1"></i>
+                </span>
+                <span id="volume-up" onclick="document.getElementById('player').volume += 0.1">
+                    <i class="icon w-28" data-feather="volume-2"></i>
+                </span>
+            </div>
+        </div>
+        <script src="/js/input.js"></script>
+        <script src="/js/play.js"></script>
+    </div>
+</body>
+<script>
+    feather.replace()
+</script>
