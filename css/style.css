@@ -71,12 +71,12 @@ body[playing="true"] .no-video {
     opacity: 0.2;
     padding: 2px 80px;
     border-radius: 10px;
-    box-shadow: var(--raise-1);
 }
 .controls:hover, .controls:focus-within {
     background: var(--d5);
     opacity: 1;
     bottom: 40px;
+    box-shadow: var(--raise-1);
 }
 
 /* buttons */
